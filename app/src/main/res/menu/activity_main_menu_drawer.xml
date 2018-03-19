@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_agregarObjeto"
+            android:icon="@drawable/ic_add_black_24dp"
+            android:title="Agregar objeto" />
+
+        <item
+            android:id="@+id/nav_modificarObjeto"
+            android:icon="@drawable/ic_edit_black_24dp"
+            android:title="Editar objeto" />
+
+        <item
+            android:id="@+id/nav_borrarObjeto"
+            android:icon="@drawable/ic_delete_forever_black_24dp"
+            android:title="Borrar objeto" />
+
+    </group>
+
+    <item android:title="Sesion">
+        <menu>
+            <item
+                android:id="@+id/nav_configurarUsuario"
+                android:icon="@drawable/ic_settings_applications_black_24dp"
+                android:title="Configurar usuario" />
+            <item
+                android:id="@+id/nav_cerrarSesion"
+                android:icon="@drawable/ic_close_black_24dp"
+                android:title="Cerrar sesion" />
+        </menu>
+    </item>
+
+</menu>
