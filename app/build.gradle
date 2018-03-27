@@ -29,13 +29,15 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //Firebase Authentication
+    implementation 'com.android.support:support-v4:26.1.0'
     compile 'com.google.firebase:firebase-core:11.6.0'
     implementation 'com.google.firebase:firebase-auth:11.6.0'
     //Google
     implementation 'com.google.android.gms:play-services-auth:11.6.0'
     //Anko
     implementation "org.jetbrains.anko:anko:0.10.2"
-
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
 
     implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
@@ -43,5 +45,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
 }
+
+
+
 
 apply plugin: 'com.google.gms.google-services'

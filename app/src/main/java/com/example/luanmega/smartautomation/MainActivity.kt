@@ -96,11 +96,11 @@ class MainActivity : AppCompatActivity() {
         updateUI(currentUser)
     }
 
-    /*override fun onPause() {
+    override fun onPause() {
         super.onPause()
     }
 
     override fun onResume() {
         super.onResume()
-    }*/
+    }
 }
