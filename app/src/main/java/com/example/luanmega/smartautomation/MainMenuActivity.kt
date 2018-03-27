@@ -16,6 +16,7 @@ import com.google.firebase.auth.FirebaseUser
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main_menu.*
 import kotlinx.android.synthetic.main.app_bar_main_menu.*
+import kotlinx.android.synthetic.main.fragment_add_object.*
 import kotlinx.android.synthetic.main.nav_header_main_menu.*
 
 class MainMenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{

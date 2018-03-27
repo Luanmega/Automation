@@ -38,6 +38,9 @@ dependencies {
     implementation "org.jetbrains.anko:anko:0.10.2"
     //Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
+    //Firebase Database
+    compile 'com.google.firebase:firebase-database:11.6.0'
+
 
     implementation 'com.android.support:design:26.1.0'
     testImplementation 'junit:junit:4.12'
