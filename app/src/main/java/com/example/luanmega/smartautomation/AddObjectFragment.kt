@@ -64,7 +64,7 @@ class AddObjectFragment : Fragment(), View.OnClickListener {
             var firebaseData : DatabaseReference ?= mDatabase
             var area : String = txtObjArea.text.toString()
             var obj : String = txtObjName.text.toString()
-            if(area != null && obj != null){
+            if(area != "" && obj != ""){
                 var dev = Device(area, obj)
 
                 val key = firebaseData!!.child("User").child(user!!.uid).child("Area").push().key

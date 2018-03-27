@@ -63,7 +63,7 @@ class MainMenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSel
         menuInflater.inflate(R.menu.main_menu, menu)
         cambiarDatos()
         //supportFragmentManager.beginTransaction().add(R.id.FrameContainer, mainFragment)
-        //fManager!!.beginTransaction()!!.add(R.id.FrameContainer, mainFragment).commit()
+        fManager.beginTransaction()!!.add(R.id.FrameContainer, mainFragment).commit()
         return true
     }
 
