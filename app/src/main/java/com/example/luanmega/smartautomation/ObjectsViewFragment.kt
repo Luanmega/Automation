@@ -17,6 +17,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import org.jetbrains.anko.support.v4.toast
+import com.google.firebase.database.DataSnapshot
+
+
 
 
 /**
@@ -72,17 +75,29 @@ class ObjectsViewFragment : Fragment() {
 
     fun getItems(){
         var objListener = object : ValueEventListener {
-            val menu: MutableList<objStatus> = mutableListOf()
+            val menu: MutableList<objetos> = mutableListOf()
             override fun onDataChange(dataSnapshot: DataSnapshot?) {
-                var children = dataSnapshot!!.children
-                dataSnapshot?.children.mapNotNullTo(menu) { it.getValue<objStatus>(objStatus::class.java) }
+                /*var children = dataSnapshot!!.children
+                dataSnapshot?.children.mapNotNullTo(menu) { it.getValue(objStatus::class.java) }
+                val message = dataSnapshot.getValue(objStatus::class.java)
+                toast("${message!!.Area}")
+
+
+
                 var lista: ArrayList<objStatus> = ArrayList<objStatus>()
                 for(i in menu.indices){
                     lista?.add(i, menu[i])
-                    toast("${menu[i]}")
+                    //toast("${menu[i]}")
                 }
-                addAnimals(lista)
+                addAnimals(lista)*/
+                dataSnapshot!!.children!!.mapNotNullTo(menu) { it.getValue<objetos>(objetos::class.java) }
+                for (ds in dataSnapshot!!.children) {
+                    var address = ds.child("User").child("${user!!.uid}").getValue(String::class.java)
+                    //val name = ds.child("name").getValue(String::class.java)
+                    toast("$address.Area")
+                }
             }
+
             override fun onCancelled(databaseError: DatabaseError?) {
                 toast("Se ha cancelado la obtencion de informacion")
             }
@@ -96,4 +111,10 @@ data class objStatus(
     var Area: String = "",
     var Obj: String = "",
     var Status: String = ""
+)
+
+data class objetos(
+        var obj1: String = "",
+        var obj2: String = "",
+        var obj3: String = ""
 )
